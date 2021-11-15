@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+.page {
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
+.landing-page-container {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #282D35;
+  overflow-y: scroll;
+}
+
+.left-side {
+  height: 100%;
+  width: 70%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid salmon;
+}
+
+.form {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+}
+
+.input {
+  width: 38%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, .3);
+  color: salmon;
+}
+
+.select_input{
+  width: 20%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, .3);
+  color: salmon;
+}
+
+.input_value {
+  width: 20%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px; 
+  background-color: rgba(255, 255, 255, .3);
+  margin-left: 10px;
+  color: salmon;
+}  
+
+.select_input:focus {
+  border: 1px solid salmon;
+  outline: none;
+}
+
+.input_value:focus {
+  border: 1px solid salmon;
+  outline: none;
+}
+
+.select_input::placeholder {
+  color: #282D35;
+}
+
+.input_value::placeholder {
+  color: #282D35;
+}
+
+.input_repo { 
+  color: salmon;
+}
+
+.select_sort {
+  width: 15%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, .3);
+  color: salmon;
+  margin-left: 10px;
+}
+
+.select_order {
+  width: 15%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, .3);
+  color: salmon;
+  margin-left: 10px;
+}
+
+.select_lang {
+  width: 20%;
+  height: 30px;
+  border: bold;
+  border-radius: 6px;
+  font-size: 18px;
+  padding-left: 5px;
+  background-color: rgba(255, 255, 255, .3);
+  color: salmon;
+  margin-left: 10px;
+}
+
+.button {
+  height: 30px;
+  width: 15%;
+  background-color: salmon;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #282D35;
+  box-sizing: content-box;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.results-container {
+  margin-top: 10px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.row {
+  display: flex;
+  cursor: pointer;
+  width: 44%;
+  height: 45px;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: flex-start;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row > h2 {
+  color: salmon;
+  pointer-events: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row:hover {
+  background-color: salmon;
+}
+
+.row > h2:hover {
+  color: #282D35;
+}
+
+.repo-name {
+  margin-left: 5px;
+}
+
+.repo-details-container {
+  height: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: left;
+  padding-left: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.details-row {
+  height: 10px;
+  width: 70%;
+  display: flex;
+  margin-top: 20px;
+  align-items: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.commits-message {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  align-items: left;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #696C71;
+}
+
+.commits_label {
+  font-weight: bold;
+  margin-right: 20px;
+  color: #696C71;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.value {
+  color: salmon;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.date_value {
+  color: salmon;
+  width: 80%;
+  margin-left: 10px;
+}
+
+.commits_value {
+  color: salmon;
+  width: 100%;
+  margin-left: 10px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.loader {
+  color: salmon;
+  margin-left: 5%;
+}
+
+.header {
+  font-weight: bold;
+  color: salmon;
+  margin-left: 5%;
+  align-items: center;
+}
+
+.error-display {
+  margin-top: 30px;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;  
+  font-size: 20px;
+  color:red;
+  display: block; 
 }
